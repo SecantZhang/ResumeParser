@@ -1,0 +1,811 @@
+Last login: Sun Mar 10 13:50:54 on ttys002
+Generatavillson:~ Wilson$ cd /Users/Michavillson/Documents/PROJECTS/PeerSkills/ResumeParser 
+Generatavillson:ResumeParser Wilson$ source activate py27
+(py27) Generatavillson:ResumeParser Wilson$ conda install -c conda-forge pdfminer 
+Solving environment: \ failed
+
+CondaError: KeyboardInterrupt
+
+(py27) Generatavillson:ResumeParser Wilson$ pip install pdfminder
+Collecting pdfminder
+  Could not find a version that satisfies the requirement pdfminder (from versions: )
+No matching distribution found for pdfminder
+You are using pip version 18.0, however version 19.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+(py27) Generatavillson:ResumeParser Wilson$ pip install --upgrade pip
+Collecting pip
+  Using cached https://files.pythonhosted.org/packages/d8/f3/413bab4ff08e1fc4828dfc59996d721917df8e8583ea85385d51125dceff/pip-19.0.3-py2.py3-none-any.whl
+Installing collected packages: pip
+  Found existing installation: pip 18.0
+    Uninstalling pip-18.0:
+      Successfully uninstalled pip-18.0
+Successfully installed pip-19.0.3
+(py27) Generatavillson:ResumeParser Wilson$ pip install pdfminder
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Collecting pdfminder
+  Could not find a version that satisfies the requirement pdfminder (from versions: )
+No matching distribution found for pdfminder
+(py27) Generatavillson:ResumeParser Wilson$ pip install pdfminer
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Collecting pdfminer
+Installing collected packages: pdfminer
+Successfully installed pdfminer-20140328
+(py27) Generatavillson:ResumeParser Wilson$ pip install bson
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Collecting bson
+Requirement already satisfied: six>=1.9.0 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from bson) (1.11.0)
+Requirement already satisfied: python-dateutil>=2.4.0 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from bson) (2.7.3)
+Installing collected packages: bson
+Successfully installed bson-0.5.8
+(py27) Generatavillson:ResumeParser Wilson$ pip install datefinder
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Collecting datefinder
+  Using cached https://files.pythonhosted.org/packages/16/2b/af8efaee30c0ba4238cb4d0645a07100d33d11d20a8783c443ed8b813eb9/datefinder-0.7.0-py2.py3-none-any.whl
+Collecting regex>=2017.02.08 (from datefinder)
+Requirement already satisfied: python-dateutil>=2.4.2 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from datefinder) (2.7.3)
+Requirement already satisfied: pytz in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from datefinder) (2018.4)
+Requirement already satisfied: six>=1.5 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from python-dateutil>=2.4.2->datefinder) (1.11.0)
+Installing collected packages: regex, datefinder
+Successfully installed datefinder-0.7.0 regex-2019.3.9
+(py27) Generatavillson:ResumeParser Wilson$ pip install fuzzywuzzy
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Collecting fuzzywuzzy
+  Using cached https://files.pythonhosted.org/packages/d8/f1/5a267addb30ab7eaa1beab2b9323073815da4551076554ecc890a3595ec9/fuzzywuzzy-0.17.0-py2.py3-none-any.whl
+Installing collected packages: fuzzywuzzy
+Successfully installed fuzzywuzzy-0.17.0
+(py27) Generatavillson:ResumeParser Wilson$ pip install -U nltk
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Collecting nltk
+Requirement already satisfied, skipping upgrade: six in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from nltk) (1.11.0)
+Requirement already satisfied, skipping upgrade: singledispatch in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from nltk) (3.4.0.3)
+Installing collected packages: nltk
+  Found existing installation: nltk 3.3
+    Uninstalling nltk-3.3:
+      Successfully uninstalled nltk-3.3
+Successfully installed nltk-3.4
+(py27) Generatavillson:ResumeParser Wilson$ python -m pip install pymongo
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Collecting pymongo
+  Downloading https://files.pythonhosted.org/packages/81/ed/ab60269689de46be0964fd93494f9f86a5196802a9156eddc5e5411750c9/pymongo-3.7.2-cp27-cp27m-macosx_10_13_intel.whl (336kB)
+    100% |████████████████████████████████| 337kB 2.5MB/s 
+Installing collected packages: pymongo
+Successfully installed pymongo-3.7.2
+(py27) Generatavillson:ResumeParser Wilson$ cd /Users/Michavillson/Documents/PROJECTS/PeerSkills/ResumeParser/Code/ResumeParser 
+(py27) Generatavillson:ResumeParser Wilson$ python insert_pdf.py
+(py27) Generatavillson:ResumeParser Wilson$ python parser.py
+Traceback (most recent call last):
+  File "parser.py", line 24, in <module>
+    from uszipcode import ZipcodeSearchEngine
+ImportError: No module named uszipcode
+(py27) Generatavillson:ResumeParser Wilson$ pip install uszipcode
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Collecting uszipcode
+  Downloading https://files.pythonhosted.org/packages/34/e1/f828cd05732433d0074a17a2623a8c1281c5dc7fb265fef1d3867692037b/uszipcode-0.2.2-py2.py3-none-any.whl (137kB)
+    100% |████████████████████████████████| 143kB 2.5MB/s 
+Requirement already satisfied: attrs in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from uszipcode) (18.1.0)
+Collecting pathlib-mate (from uszipcode)
+  Downloading https://files.pythonhosted.org/packages/ff/f2/a1e6044fe90784e7bbc05286f2e8616aa2ff167f7275f5a6f2df479092c0/pathlib_mate-0.0.15-py2.py3-none-any.whl (195kB)
+    100% |████████████████████████████████| 204kB 2.0MB/s 
+Requirement already satisfied: requests in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from uszipcode) (2.18.4)
+Requirement already satisfied: sqlalchemy in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from uszipcode) (1.2.7)
+Collecting autopep8 (from pathlib-mate->uszipcode)
+  Downloading https://files.pythonhosted.org/packages/5b/ba/37d30e4263c51ee5a655118ac8c331e96a4e45fd4cea876a74b87af9ffc1/autopep8-1.4.3.tar.gz (113kB)
+    100% |████████████████████████████████| 122kB 2.6MB/s 
+Requirement already satisfied: six in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from pathlib-mate->uszipcode) (1.11.0)
+Requirement already satisfied: scandir; python_version < "3.5" in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from pathlib-mate->uszipcode) (1.7)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from requests->uszipcode) (3.0.4)
+Requirement already satisfied: idna<2.7,>=2.5 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from requests->uszipcode) (2.6)
+Requirement already satisfied: urllib3<1.23,>=1.21.1 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from requests->uszipcode) (1.22)
+Requirement already satisfied: certifi>=2017.4.17 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from requests->uszipcode) (2018.4.16)
+Requirement already satisfied: pycodestyle>=2.4.0 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from autopep8->pathlib-mate->uszipcode) (2.4.0)
+Building wheels for collected packages: autopep8
+  Building wheel for autopep8 (setup.py) ... done
+  Stored in directory: /Users/Michavillson/Library/Caches/pip/wheels/91/07/fd/99884826d575c769102ddec2f9b96c7ad57cc6b5ca3a5e02b4
+Successfully built autopep8
+Installing collected packages: autopep8, pathlib-mate, uszipcode
+Successfully installed autopep8-1.4.3 pathlib-mate-0.0.15 uszipcode-0.2.2
+(py27) Generatavillson:ResumeParser Wilson$ python parser.py
+Traceback (most recent call last):
+  File "parser.py", line 24, in <module>
+    from uszipcode import ZipcodeSearchEngine
+ImportError: cannot import name ZipcodeSearchEngine
+(py27) Generatavillson:ResumeParser Wilson$ pip install uszipcode
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Requirement already satisfied: uszipcode in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (0.2.2)
+Requirement already satisfied: attrs in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from uszipcode) (18.1.0)
+Requirement already satisfied: pathlib-mate in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from uszipcode) (0.0.15)
+Requirement already satisfied: requests in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from uszipcode) (2.18.4)
+Requirement already satisfied: sqlalchemy in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from uszipcode) (1.2.7)
+Requirement already satisfied: autopep8 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from pathlib-mate->uszipcode) (1.4.3)
+Requirement already satisfied: six in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from pathlib-mate->uszipcode) (1.11.0)
+Requirement already satisfied: scandir; python_version < "3.5" in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from pathlib-mate->uszipcode) (1.7)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from requests->uszipcode) (3.0.4)
+Requirement already satisfied: idna<2.7,>=2.5 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from requests->uszipcode) (2.6)
+Requirement already satisfied: urllib3<1.23,>=1.21.1 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from requests->uszipcode) (1.22)
+Requirement already satisfied: certifi>=2017.4.17 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from requests->uszipcode) (2018.4.16)
+Requirement already satisfied: pycodestyle>=2.4.0 in /Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages (from autopep8->pathlib-mate->uszipcode) (2.4.0)
+(py27) Generatavillson:ResumeParser Wilson$ python parser.py
+Traceback (most recent call last):
+  File "parser.py", line 24, in <module>
+    from uszipcode import ZipcodeSearchEngine
+ImportError: cannot import name ZipcodeSearchEngine
+(py27) Generatavillson:ResumeParser Wilson$ pip install pyzipcode
+DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.
+Collecting pyzipcode
+  Downloading https://files.pythonhosted.org/packages/8f/aa/4d8576fd3559d3cdc289f3f00c048d2d628643bf0b5a613a4f74bbe3af65/pyzipcode-1.0.zip (1.9MB)
+    100% |████████████████████████████████| 1.9MB 2.5MB/s 
+Collecting pysqlite (from pyzipcode)
+  Downloading https://files.pythonhosted.org/packages/42/02/981b6703e3c83c5b25a829c6e77aad059f9481b0bbacb47e6e8ca12bd731/pysqlite-2.8.3.tar.gz (80kB)
+    100% |████████████████████████████████| 81kB 16.5MB/s 
+Building wheels for collected packages: pyzipcode, pysqlite
+  Building wheel for pyzipcode (setup.py) ... done
+  Stored in directory: /Users/Michavillson/Library/Caches/pip/wheels/11/1f/b3/ba50d6510e819922e664e1b4efdc679e63473437d1500122c4
+  Building wheel for pysqlite (setup.py) ... done
+  Stored in directory: /Users/Michavillson/Library/Caches/pip/wheels/2c/bc/60/a85b180bba3e195003982ed682b5690a6cea11bfe81f2a5dfd
+Successfully built pyzipcode pysqlite
+Installing collected packages: pysqlite, pyzipcode
+Successfully installed pysqlite-2.8.3 pyzipcode-1.0
+(py27) Generatavillson:ResumeParser Wilson$ python parser.py
+/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+Resume:  DHRUV_JINESH_SOFTWARE_RESUME.pdf
+***************************************************************************************************
+User segment:  JINESH DHRUV 
+jad6566@g.rit.edu         585-434-8398         238 Crittenden Way Apartments, Apt 5, Rochester, NY 14623 
+                                                   https://www.linkedin.com/in/jineshdhruv         bitbucket.org/jineshdhruv 
+None
+***************************************************************************************************
+Work segment:  WORK EXPERIENCE: 
+Data Analyst Intern | Cause + Effect Strategy & Marketing (CESM) | Rochester, New York 
+              May 17-Aug 17 
+-  Developed machine learning model to predict propensity to vote in election, which maximized relevant Ads retargeting by 25%  
+- 
+Created interactive dashboards on Sisense by preparing quantitative and qualitative data to assist end users' decision-making 
+Data Strategy Intern | Viacom | New York City, New York 
+                 Sep 16-Dec 16  
+Built the Data Warehouse infrastructure, and executed OLAP queries to analyze the performance of post campaign data 
+- 
+-  Displayed KPIs for benchmarking successful posts using predictive modeling techniques, which increased successful posts by 35% 
+Accomplished data-driven audience insights, campaign optimization and effectiveness measurement across integrated marketing 
+- 
+Software Developer Intern | Adventive | Rochester, New York 
+                May 16-Aug 16 
+- 
+- 
+- 
+Led restructuring of the Ad-Builder tool to build platform independent seamless web application for clients 
+Boosted Angular JS modules to tackle memory leaks & scalability issues that increased Ad-Builder tool responsiveness by 20% 
+Implemented & deployed failure handler, which reduced failure rate by 40% 
+Software Developer | Imagna Analytics | Mumbai, India 
+                  Jun 14-Jun 15 
+Food Panda: 
+- 
+- 
+AdPersonix Digital Marketing: 
+- 
+- 
+Built information retrieval and recommendation system for global master dish database across 42 countries with User Interface 
+Implemented data mining techniques to classify the unstructured data & formulate association rules, which earned more $30k  
+Integrated Android SDK with additional functionalities to collect & track user’s In-app activity for profile building 
+Constructed backend infrastructure with a team of 3 for Real-Time Bidding using ad exchanges & supply-side platforms 
+None
+***************************************************************************************************
+Education segment:  EDUCATION:  
+M.S. Computer Science | Rochester Institute of Technology | Rochester, New York, USA  
+       Expected: Dec 2017 
+Coursework: Foundation of Algorithms, Distributed Systems, Machine Learning, Web Services, Big Data Analytics                                GPA: 3.5 
+B.E. Computer Engineering | University of Mumbai | Mumbai, India 
+Aug 11-May 14 
+Coursework: Data Structures, Software Architecture, System Programming & Compiler Construction, System Security 
+            GPA: 3.6 
+None
+***************************************************************************************************
+Skill segment:  TECHNICAL SKILLS: 
+Programming Languages: Java, Python, R, SQL, C++, C#                       Web Technology: Angular JS, JavaScript, NodeJS, PHP, XML, SOAP, REST 
+Tools / Technology: IntelliJ IDEA, PyCharm, Eclipse, Weka, Sisense, Tableau, AWS ec2, Git, Bitbucket, Neo4j, MongoDB, SQL Workbench 
+None
+***************************************************************************************************
+Project segment:  PROJECTS: 
+Amazon Book Reviews (Java, Android Studio) 
+Carried out text mining using bag of words, n-grams, stemming, positional index and tokenization 
+Implemented Naïve Bayes to identify text sentiment & Ranking algorithm to display top 10 book review in android application 
+  Jun 17-Aug 17 
+- 
+- 
+Wine Quality Prediction (R Programming, Python, Sisense) 
+                                  May 17-Jul 17 
+- 
+- 
+Formulated supervised machine learning algorithm for feature extraction, outlier detection & normalization 
+Implemented models like Multinomial Logistic Regression & Random Forest for predicting Wine quality with an accuracy of 83% 
+User’s Social Profile-based Web Service Discovery (Java, Neo4j)                
+                   Feb 17-Apr17 
+- 
+- 
+Created a distributed system for web service discovery based on the user’s social networks    
+Achieved satisfactory web service discovery results by considering the user’s social profile and its past invocation history 
+API Search Engine (MongoDB, Node JS, Jade, RapidMiner, JavaScript)   
+                                  Mar 17-Apr17 
+-  Developed a web-based query system to parse, store, manage & analyze all the API’s & Mashups listed in Programmable Web 
+- 
+Improved the accuracy of keyword based API / Mashup discovery by 15% using machine learning algorithms 
+Bus Reservation System (Java, SOAP Message Handler) 
+ Jan 17-Mar 17 
+-  Designed & hosted a Bus Reservation System web service using NetBeans IDE and Glassfish server with a backend SQL database 
+- 
+Incorporated coordination protocol using SOAP message handler to confront invalid sequences of user invocations 
+Text Translation & Recognition from Image (JavaScript, JQuery, HTML5) 
+                                  Jan 17-Feb 17 
+Built an application that can take an image, recognize & translate text in the image & query the browser for text search results 
+- 
+-  Used Microsoft Optical Character Recognition & Translate API for text extraction & translation from the image 
+Intelligent Parallel File Processing System (Java, Shell Script)   
+                                                               Mar 16-May 16 
+-  Developed personalized MapReduce for real-time file processing based on its size 
+- 
+Tracked processors & allocated work based on its past performance results thereby increasing file processing speed by 45%   
+Chord Lookup Service (Java) 
+                                 Mar 16-Apr 16 
+-  Designed multi-threaded environment across multiple client and server for file transfer using TCP/IP protocol 
+- 
+Implemented chord structure that features file insertion, deletion, retrieval, and routing across the distributed network 
+None
+***************************************************************************************************
+Other segment:  LEADERSHIP & HONORS: 
+- 
+- 
+Completed Advanced Certification in Big Data Analytics from Rochester Institute of Technology 
+Awarded 30% Graduate Scholarship in Computer Science at Rochester Institute of Technology (AY 2016-17) 
+
+
+None
+***************************************************************************************************
+
+
+
+Traceback (most recent call last):
+  File "parser.py", line 1345, in <module>
+    main()
+  File "parser.py", line 1341, in main
+    fetch_file_from_mongod()
+  File "parser.py", line 1290, in fetch_file_from_mongod
+    parse_resume(v)
+  File "parser.py", line 1268, in parse_resume
+    create_segments()
+  File "parser.py", line 895, in create_segments
+    user = parse_user_segment()
+  File "parser.py", line 590, in parse_user_segment
+    user = extract_user_detail()
+  File "parser.py", line 262, in extract_user_detail
+    full_name, email_flag, phone_flag, link_flag = get_name(top_text_id)
+  File "parser.py", line 157, in get_name
+    sentences = nltk.sent_tokenize(text)
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/tokenize/__init__.py", line 104, in sent_tokenize
+    tokenizer = load('tokenizers/punkt/{0}.pickle'.format(language))
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/data.py", line 868, in load
+    opened_resource = _open(resource_url)
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/data.py", line 993, in _open
+    return find(path_, path + ['']).open()
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/data.py", line 699, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource punkt not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt')
+  
+  Attempted to load tokenizers/punkt/english.pickle
+
+  Searched in:
+    - '/Users/Michavillson/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/share/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - u''
+**********************************************************************
+
+(py27) Generatavillson:ResumeParser Wilson$ python insert_pdf.py
+(py27) Generatavillson:ResumeParser Wilson$ python parser.py
+/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+Resume:  DHRUV_JINESH_SOFTWARE_RESUME.pdf
+***************************************************************************************************
+User segment:  张 政 
+以上所有项⽬目代码均已开源在GitHub: https://github.com/SecantZhang
+None
+***************************************************************************************************
+Work segment:  None
+***************************************************************************************************
+Education segment:  1400 MARTIN ST, STATE COLLEGE, PA     美 国 : +1 (814) 323 1038    中 国 : +86 13134167010     WWW.ZHENG-ZHANG.COM
+教育经历 
+❖ 宾夕法尼亚州⽴立⼤大学主校 (The Pennsylvania State University - University Park)       GPA: 3.65/4.00 
+✦ 专业1：统计学 / Statistics                                                             - 计算统计⽅方向 / Computing Option 
+✦ 专业2：数据科学 / Data Sciences                                               - 统计建模分析⽅方向 / Statistical Modeling Option 
+✦ 辅修1：计算机科学 / Computer Science 
+✦ 辅修2：数学 / Mathematics 
+相关课业经历 
+❖ CMPSC 410 — ⼤大规模数据程序分析及设计                                                                 2019年年春季学期 
+✦ 熟练掌握MapReduce, Spark等⼤大规模数据运算程序的设计编写，Hadoop分布式系统及HDFS的操作。 
+✦ 在项⽬目中主导⼤大规模数据集(150 GB)的数据清洗及分析⼯工作。 
+❖ CMPSC 448 — 机器器学习及⼈人⼯工智能                                                                           2019年年春季学期 
+✦ 掌握多种机器器学习算法（监督学习，⾮非监督学习，加强学习等）并根据情况制定或调整相对应的算法。  
+❖ STAT 440 — 计算统计                                                                                              2019年年春季学期 
+✦ 多种统计计算算法的理理论及实现，以此基础执⾏行行更更⾼高效的统计计算分析。 
+❖ IST 210 — 数据管理理                                                                                                 2018年年春季学期 
+✦ 熟练掌握关系数据库的结构以及查询语⾔言SQL。 
+相关技能 
+✦ 编程语⾔言相关：Python, R, Swift, JAVA, C++, JavaScript, SAS. 
+✦ 数据库相关：SQL, MongoDB, Redis. 
+✦ 数据分析及框架相关：MapReduce, Spark, Hadoop, Pig, HDFS, Scikit-learn, ggplot, tidyverse.  
+实习经历 
+❖ 基础数据分析实习⽣生 — 北北京精英智通交通科技有限公司                                     2017年年6⽉月— 2017年年9⽉月 
+✦ 使⽤用Python收集10家公司超过5年年公开发布在公司年年报上的财务数据并整理理成csv⽂文件。 
+✦ 通过以上财务数据制作数据可视化图表，撰写数据分析报告给经理理作为分析市场规模与市场⾛走向的参考。 
+项⽬目经历 
+❖ 编程相关 — 软件开发：A-WEATHER APP 
+✦ 参加HackPSU 2018（24⼩小时编程竞赛）排名：2/160。 
+✦ 使⽤用Swift语⾔言在24⼩小时之内成功开发⼀一款应⽤用AR技术 (Augmented Reality - 增强现实) 并调⽤用AccuWeather 
+✦ 在展示基本天⽓气数据之外，针对多种天⽓气状况，我们开发相应的情景与3D模型使⽤用户⽆无需来到室外即可以感受
+API使天⽓气可视化的iPad应⽤用程序。 
+当时天⽓气的效果。 
+❖ 数据分析相关 — R语⾔言程序包开发：RMODEL2TEX 
+✦ 使⽤用R语⾔言开发⼀一个可以将多种统计模型转为LateX数学写作语⾔言语法的R程序包 (R package)。 
+✦ ⽀支持多种统计模型 - 线性回归，逻辑回归等。 
+❖ 数据分析相关 — ANALYZING POPULARITY OF ONLINE ARTICLES 
+✦ 针对marshable.com 上的39644个⽂文章包括超过60个特征进⾏行行多元统计分析。 
+✦ 训练并⽐比较多种线性回归模型（线性回归，逻辑回归，稳健回归）的精确度以及决定系数。 
+✦ 通过研究整体数据的特点，运⽤用特殊模型（稳健回归）将线性回归的精确度提⾼高8%。
+
+
+None
+***************************************************************************************************
+Skill segment:  None
+***************************************************************************************************
+Project segment:  None
+***************************************************************************************************
+Other segment:  None
+***************************************************************************************************
+
+
+
+Traceback (most recent call last):
+  File "parser.py", line 1345, in <module>
+    main()
+  File "parser.py", line 1341, in main
+    fetch_file_from_mongod()
+  File "parser.py", line 1290, in fetch_file_from_mongod
+    parse_resume(v)
+  File "parser.py", line 1268, in parse_resume
+    create_segments()
+  File "parser.py", line 895, in create_segments
+    user = parse_user_segment()
+  File "parser.py", line 590, in parse_user_segment
+    user = extract_user_detail()
+  File "parser.py", line 262, in extract_user_detail
+    full_name, email_flag, phone_flag, link_flag = get_name(top_text_id)
+  File "parser.py", line 157, in get_name
+    sentences = nltk.sent_tokenize(text)
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/tokenize/__init__.py", line 104, in sent_tokenize
+    tokenizer = load('tokenizers/punkt/{0}.pickle'.format(language))
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/data.py", line 868, in load
+    opened_resource = _open(resource_url)
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/data.py", line 993, in _open
+    return find(path_, path + ['']).open()
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/data.py", line 699, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource punkt not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt')
+  
+  Attempted to load tokenizers/punkt/english.pickle
+
+  Searched in:
+    - '/Users/Michavillson/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/share/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - u''
+**********************************************************************
+
+(py27) Generatavillson:ResumeParser Wilson$ python insert_pdf.py
+(py27) Generatavillson:ResumeParser Wilson$ python parser.py
+/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+Resume:  DHRUV_JINESH_SOFTWARE_RESUME.pdf
+***************************************************************************************************
+User segment:  Z H E N G   Z H A N G  
+None
+***************************************************************************************************
+Work segment:  RELATED ACADEMIC EXPERIENCE 
+-  CMPSC 410 – Programming Model for Big Data. 
+Date: Spring 2019 
+Implementation of MapReduce. 
+• 
+•  Spark algorithmic frameworks for big data analytics.  
+-  CMPSC 448 – Machine Learning and Artificial Intelligence. 
+-  STAT 440 – Computational Statistics 
+Date: Spring 2019 
+•  Various machine learning models and how noise and bias in the data affect their results.  
+Date: Spring 2019 
+•  Theory and implementation of statistical computing algorithms.  
+•  Efficiently execute statistical analysis in a wide range of situations.  
+Beijing JAYA Technology co., Ltd, Beijing, China 
+Date: Jun 2017 – Sep 2017 
+•  Collected and analyzed the data from companies’ annual report.  
+•  Wrote the research report for manager’s decision reference.  
+None
+***************************************************************************************************
+Education segment:  zxz147@psu.edu | 1400 Martin St, State College, 16803 | (814) 323 1038 | GitHub: SecantZhang 
+EDUCATION 
+-  The Pennsylvania State University (Junior) 
+•  Statistics – Computing Option, Bachelor of Science. 
+•  Data Science – Statistical Modeling Option, Bachelor of Science. 
+•  Mathematics – Minor. 
+•  Computer Science – Minor.  
+•  Information Science and Technology - Minor 
+•  Earned Penn State Behrend Honor Program.  
+ Graduation: May 2020 
+GPA: 3.65/4.00 
+None
+***************************************************************************************************
+Skill segment:  -  Programming Languages and Skills:  
+•  R, Swift, Python, C++, JAVA, SQL, MongoDB, JavaScript, SAS, MapReduce 
+None
+***************************************************************************************************
+Project segment:  None
+***************************************************************************************************
+Other segment:  None
+***************************************************************************************************
+
+
+
+Traceback (most recent call last):
+  File "parser.py", line 1345, in <module>
+    main()
+  File "parser.py", line 1341, in main
+    fetch_file_from_mongod()
+  File "parser.py", line 1290, in fetch_file_from_mongod
+    parse_resume(v)
+  File "parser.py", line 1268, in parse_resume
+    create_segments()
+  File "parser.py", line 895, in create_segments
+    user = parse_user_segment()
+  File "parser.py", line 590, in parse_user_segment
+    user = extract_user_detail()
+  File "parser.py", line 262, in extract_user_detail
+    full_name, email_flag, phone_flag, link_flag = get_name(top_text_id)
+  File "parser.py", line 157, in get_name
+    sentences = nltk.sent_tokenize(text)
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/tokenize/__init__.py", line 104, in sent_tokenize
+    tokenizer = load('tokenizers/punkt/{0}.pickle'.format(language))
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/data.py", line 868, in load
+    opened_resource = _open(resource_url)
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/data.py", line 993, in _open
+    return find(path_, path + ['']).open()
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/data.py", line 699, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource punkt not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt')
+  
+  Attempted to load tokenizers/punkt/english.pickle
+
+  Searched in:
+    - '/Users/Michavillson/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/share/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - u''
+**********************************************************************
+
+(py27) Generatavillson:ResumeParser Wilson$ python -m nltk.downloader maxent_treebank_pos_tagger
+[nltk_data] Downloading package maxent_treebank_pos_tagger to
+[nltk_data]     /Users/Michavillson/nltk_data...
+[nltk_data]   Unzipping taggers/maxent_treebank_pos_tagger.zip.
+(py27) Generatavillson:ResumeParser Wilson$ python insert_pdf.py
+(py27) Generatavillson:ResumeParser Wilson$ python parser.py
+/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+Resume:  DHRUV_JINESH_SOFTWARE_RESUME.pdf
+***************************************************************************************************
+User segment:  Z H E N G   Z H A N G  
+None
+***************************************************************************************************
+Work segment:  RELATED ACADEMIC EXPERIENCE 
+-  CMPSC 410 – Programming Model for Big Data. 
+Date: Spring 2019 
+Implementation of MapReduce. 
+• 
+•  Spark algorithmic frameworks for big data analytics.  
+-  CMPSC 448 – Machine Learning and Artificial Intelligence. 
+-  STAT 440 – Computational Statistics 
+Date: Spring 2019 
+•  Various machine learning models and how noise and bias in the data affect their results.  
+Date: Spring 2019 
+•  Theory and implementation of statistical computing algorithms.  
+•  Efficiently execute statistical analysis in a wide range of situations.  
+Beijing JAYA Technology co., Ltd, Beijing, China 
+Date: Jun 2017 – Sep 2017 
+•  Collected and analyzed the data from companies’ annual report.  
+•  Wrote the research report for manager’s decision reference.  
+None
+***************************************************************************************************
+Education segment:  zxz147@psu.edu | 1400 Martin St, State College, 16803 | (814) 323 1038 | GitHub: SecantZhang 
+EDUCATION 
+-  The Pennsylvania State University (Junior) 
+•  Statistics – Computing Option, Bachelor of Science. 
+•  Data Science – Statistical Modeling Option, Bachelor of Science. 
+•  Mathematics – Minor. 
+•  Computer Science – Minor.  
+•  Information Science and Technology - Minor 
+•  Earned Penn State Behrend Honor Program.  
+ Graduation: May 2020 
+GPA: 3.65/4.00 
+None
+***************************************************************************************************
+Skill segment:  -  Programming Languages and Skills:  
+•  R, Swift, Python, C++, JAVA, SQL, MongoDB, JavaScript, SAS, MapReduce 
+None
+***************************************************************************************************
+Project segment:  None
+***************************************************************************************************
+Other segment:  None
+***************************************************************************************************
+
+
+
+Traceback (most recent call last):
+  File "parser.py", line 1345, in <module>
+    main()
+  File "parser.py", line 1341, in main
+    fetch_file_from_mongod()
+  File "parser.py", line 1290, in fetch_file_from_mongod
+    parse_resume(v)
+  File "parser.py", line 1268, in parse_resume
+    create_segments()
+  File "parser.py", line 895, in create_segments
+    user = parse_user_segment()
+  File "parser.py", line 590, in parse_user_segment
+    user = extract_user_detail()
+  File "parser.py", line 262, in extract_user_detail
+    full_name, email_flag, phone_flag, link_flag = get_name(top_text_id)
+  File "parser.py", line 157, in get_name
+    sentences = nltk.sent_tokenize(text)
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/tokenize/__init__.py", line 104, in sent_tokenize
+    tokenizer = load('tokenizers/punkt/{0}.pickle'.format(language))
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/data.py", line 868, in load
+    opened_resource = _open(resource_url)
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/data.py", line 993, in _open
+    return find(path_, path + ['']).open()
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/data.py", line 699, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource punkt not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('punkt')
+  
+  Attempted to load tokenizers/punkt/english.pickle
+
+  Searched in:
+    - '/Users/Michavillson/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/share/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - u''
+**********************************************************************
+
+(py27) Generatavillson:ResumeParser Wilson$ python
+Python 2.7.15 |Anaconda, Inc.| (default, May  1 2018, 18:37:05) 
+[GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import nltk
+>>> nltk.download('punkt')
+[nltk_data] Downloading package punkt to
+[nltk_data]     /Users/Michavillson/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+True
+>>> 
+KeyboardInterrupt
+>>> 
+KeyboardInterrupt
+>>> exit()
+(py27) Generatavillson:ResumeParser Wilson$ python insert_pdf.py
+(py27) Generatavillson:ResumeParser Wilson$ python parser.py
+/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+Resume:  DHRUV_JINESH_SOFTWARE_RESUME.pdf
+***************************************************************************************************
+User segment:  Z H E N G   Z H A N G  
+None
+***************************************************************************************************
+Work segment:  RELATED ACADEMIC EXPERIENCE 
+-  CMPSC 410 – Programming Model for Big Data. 
+Date: Spring 2019 
+Implementation of MapReduce. 
+• 
+•  Spark algorithmic frameworks for big data analytics.  
+-  CMPSC 448 – Machine Learning and Artificial Intelligence. 
+-  STAT 440 – Computational Statistics 
+Date: Spring 2019 
+•  Various machine learning models and how noise and bias in the data affect their results.  
+Date: Spring 2019 
+•  Theory and implementation of statistical computing algorithms.  
+•  Efficiently execute statistical analysis in a wide range of situations.  
+Beijing JAYA Technology co., Ltd, Beijing, China 
+Date: Jun 2017 – Sep 2017 
+•  Collected and analyzed the data from companies’ annual report.  
+•  Wrote the research report for manager’s decision reference.  
+None
+***************************************************************************************************
+Education segment:  zxz147@psu.edu | 1400 Martin St, State College, 16803 | (814) 323 1038 | GitHub: SecantZhang 
+EDUCATION 
+-  The Pennsylvania State University (Junior) 
+•  Statistics – Computing Option, Bachelor of Science. 
+•  Data Science – Statistical Modeling Option, Bachelor of Science. 
+•  Mathematics – Minor. 
+•  Computer Science – Minor.  
+•  Information Science and Technology - Minor 
+•  Earned Penn State Behrend Honor Program.  
+ Graduation: May 2020 
+GPA: 3.65/4.00 
+None
+***************************************************************************************************
+Skill segment:  -  Programming Languages and Skills:  
+•  R, Swift, Python, C++, JAVA, SQL, MongoDB, JavaScript, SAS, MapReduce 
+None
+***************************************************************************************************
+Project segment:  None
+***************************************************************************************************
+Other segment:  None
+***************************************************************************************************
+
+
+
+Traceback (most recent call last):
+  File "parser.py", line 1345, in <module>
+    main()
+  File "parser.py", line 1341, in main
+    fetch_file_from_mongod()
+  File "parser.py", line 1290, in fetch_file_from_mongod
+    parse_resume(v)
+  File "parser.py", line 1268, in parse_resume
+    create_segments()
+  File "parser.py", line 895, in create_segments
+    user = parse_user_segment()
+  File "parser.py", line 590, in parse_user_segment
+    user = extract_user_detail()
+  File "parser.py", line 262, in extract_user_detail
+    full_name, email_flag, phone_flag, link_flag = get_name(top_text_id)
+  File "parser.py", line 159, in get_name
+    sentences = [nltk.pos_tag(sent) for sent in sentences]
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/tag/__init__.py", line 161, in pos_tag
+    tagger = _get_tagger(lang)
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/tag/__init__.py", line 107, in _get_tagger
+    tagger = PerceptronTagger()
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/tag/perceptron.py", line 144, in __init__
+    find('taggers/averaged_perceptron_tagger/' + PICKLE)
+  File "/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/nltk/data.py", line 699, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource averaged_perceptron_tagger not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  >>> import nltk
+  >>> nltk.download('averaged_perceptron_tagger')
+  
+  Attempted to load taggers/averaged_perceptron_tagger/averaged_perceptron_tagger.pickle
+
+  Searched in:
+    - '/Users/Michavillson/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/share/nltk_data'
+    - '/Users/Michavillson/anaconda3/envs/py27/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+(py27) Generatavillson:ResumeParser Wilson$ python
+Python 2.7.15 |Anaconda, Inc.| (default, May  1 2018, 18:37:05) 
+[GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import nltk
+n>>> nltk.download('averaged_perceptron_tagger')
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /Users/Michavillson/nltk_data...
+[nltk_data]   Unzipping taggers/averaged_perceptron_tagger.zip.
+True
+>>> exit()
+(py27) Generatavillson:ResumeParser Wilson$ python parser.py
+/Users/Michavillson/anaconda3/envs/py27/lib/python2.7/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+Resume:  DHRUV_JINESH_SOFTWARE_RESUME.pdf
+***************************************************************************************************
+User segment:  Z H E N G   Z H A N G  
+None
+***************************************************************************************************
+Work segment:  RELATED ACADEMIC EXPERIENCE 
+-  CMPSC 410 – Programming Model for Big Data. 
+Date: Spring 2019 
+Implementation of MapReduce. 
+• 
+•  Spark algorithmic frameworks for big data analytics.  
+-  CMPSC 448 – Machine Learning and Artificial Intelligence. 
+-  STAT 440 – Computational Statistics 
+Date: Spring 2019 
+•  Various machine learning models and how noise and bias in the data affect their results.  
+Date: Spring 2019 
+•  Theory and implementation of statistical computing algorithms.  
+•  Efficiently execute statistical analysis in a wide range of situations.  
+Beijing JAYA Technology co., Ltd, Beijing, China 
+Date: Jun 2017 – Sep 2017 
+•  Collected and analyzed the data from companies’ annual report.  
+•  Wrote the research report for manager’s decision reference.  
+None
+***************************************************************************************************
+Education segment:  zxz147@psu.edu | 1400 Martin St, State College, 16803 | (814) 323 1038 | GitHub: SecantZhang 
+EDUCATION 
+-  The Pennsylvania State University (Junior) 
+•  Statistics – Computing Option, Bachelor of Science. 
+•  Data Science – Statistical Modeling Option, Bachelor of Science. 
+•  Mathematics – Minor. 
+•  Computer Science – Minor.  
+•  Information Science and Technology - Minor 
+•  Earned Penn State Behrend Honor Program.  
+ Graduation: May 2020 
+GPA: 3.65/4.00 
+None
+***************************************************************************************************
+Skill segment:  -  Programming Languages and Skills:  
+•  R, Swift, Python, C++, JAVA, SQL, MongoDB, JavaScript, SAS, MapReduce 
+None
+***************************************************************************************************
+Project segment:  None
+***************************************************************************************************
+Other segment:  None
+***************************************************************************************************
+
+
+
+Education Detail:
+University / College / High School:  Pennsylvania State University
+Degree:  Statistics
+Major:  
+GPA:  3.65/4.00
+Year: 3/1400 - 3/814 
+City:  University Park  State:  PA  Country:  USA  zipcode:  16802-1589
+
+
+
+(py27) Generatavillson:ResumeParser Wilson$ 

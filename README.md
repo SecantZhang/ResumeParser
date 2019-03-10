@@ -11,7 +11,7 @@ With the emergence of Job portal's like Linked-In, Indeed, Zip-Recruiter, Hire, 
 ## Installation
 Cloning the repository:
 ```sh
-git clone https://github.com/jineshdhruv8/ResumeParser.git
+git clone https://github.com/secantzhang/ResumeParser.git
 ```
 To install Meteor in OS X & Linux:
 ```sh
@@ -22,6 +22,10 @@ To install Meteor in Windows:
 choco install meteor
 ```
 To setup Meteor, go to "ResumeParser/resume-parser" directory and run all the below command sequentially:
+Before setting up, you probably need to change the python version from 3.X to 2.7 in order to running the python file. 
+```
+source activate py27
+```
 ```sh
 meteor npm install --save babel-runtime
 ```
@@ -43,11 +47,11 @@ Don't close the terminal and open new terminal to install python dependencies
 ```
 After installing anaconda and  Python 2.7, install all dependencies
 ```sh
-conda install -c conda-forge pdfminer 
+pip install pdfminer 
 ```
 
 ```sh
-conda install -c conda-forge bson 
+pip install bson 
 ```
 
 ```sh
@@ -59,14 +63,26 @@ pip install fuzzywuzzy
 ```
 
 ```sh
+pip install pyzipcode
+```
+
+```sh
 pip install -U nltk
 ```
 ```sh
 python -m pip install pymongo
 ```
+For those who did not used nltk before, follow the instructions below to avoid some missing resources errors. 
+```sh
+python
+import nltk
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+exit()
+```
 ## Running the program
 
-Now goto /Code/ResumeParser directory and run below command to insert sample resume files to database
+Now goto /Code/ResumeParser directory and run below command to insert sample resume files to database folder. 
 ```sh
 python insert_pdf.py
 ```

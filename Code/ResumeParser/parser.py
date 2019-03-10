@@ -21,7 +21,7 @@ from cStringIO import StringIO
 from education_detail import Education
 from user_detail import User
 import sys
-from uszipcode import ZipcodeSearchEngine
+from pyzipcode import ZipCodeDatabase
 import nltk
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
@@ -281,10 +281,10 @@ def extract_user_detail():
         zipcode = get_zipcode(neighbor.get_text())
 
         # Use zipcode dictionary to find state and city
-        search = ZipcodeSearchEngine()
-        zip_obj = search.by_zipcode(zipcode)
-        state = zip_obj.State
-        city = zip_obj.City
+        search = ZipCodeDatabase()
+        zip_obj = search[zipcode]
+        state = zip_obj.state
+        city = zip_obj.city
         user.set_addr(None,city, state, "USA", zipcode)
 
     if not link_flag and not neighbor == None:
