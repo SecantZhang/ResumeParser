@@ -25,6 +25,7 @@ from pyzipcode import ZipCodeDatabase
 import nltk
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
+import itertools
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -36,7 +37,34 @@ text_prop_dict = {}
 user_id = 1
 visited = []
 pdf_to_text_list = []
+text_list_p1 = []
+string_p1 = ""
+text_list_p2 = []
+string_p2 = ""
+text_list_p3 = []
+string_p3 = ""
+output_list_p1 = []
+output_list_p2 = []
+output_list_p3 = []
 dir_path = "wordList/"
+
+def checking_sections(list_segment, identi_str):
+    global output_list_p1, output_list_p2, output_list_p3
+    global string_p1, string_p2, string_p3
+    sum_list = []
+    sum_list += [re.split(', |                       |: |\xe2\x80\xa2', i) for i in list_segment]
+    merged = filter(None, list(itertools.chain.from_iterable(sum_list)))
+    result_list = filter(None, [x.strip(' ') for x in merged])
+    # print identi_str, result_list
+    # Re-initialize the section list. 
+    if any(item in string_p1 for item in list_segment):
+        output_list_p1.append(identi_str)
+    if any(item in string_p2 for item in list_segment):
+        output_list_p2.append(identi_str)
+    if any(item in string_p3 for item in list_segment):
+        output_list_p3.append(identi_str)
+    
+
 
 
 def convert_pdf_to_txt(fileObj):
@@ -47,7 +75,7 @@ def convert_pdf_to_txt(fileObj):
     :return: None
     """
 
-    global pdf_to_text_list
+    global pdf_to_text_list, string_p1, string_p2, string_p3
 
     # Convert pdf document into text document
     rsrcmgr = PDFResourceManager()
@@ -69,6 +97,24 @@ def convert_pdf_to_txt(fileObj):
     text = re.sub(r'\n\s*\n', '\n', text)
     pdf_to_text_list = text.split("\n")
 
+    # Split the text_list into 3 parts. 
+    temp_size = len(pdf_to_text_list)
+    for i in range(0, temp_size):
+        # Top section
+        if i in range(0, int(temp_size/3)):
+            text_list_p1.append(pdf_to_text_list[i])
+        elif i in range(int(temp_size/3), int(temp_size/3) * 2):
+            text_list_p2.append(pdf_to_text_list[i])
+        else:
+            text_list_p3.append(pdf_to_text_list[i])
+
+    string_p1 = ''.join(text_list_p1)
+    string_p2 = ''.join(text_list_p2)
+    string_p3 = ''.join(text_list_p3)
+
+    # print "p1---------------", string_p1
+    # print "p2---------------", string_p2
+    # print "p3---------------", string_p3
 
 def read_pdf_miner(fileObj):
     """
@@ -280,12 +326,15 @@ def extract_user_detail():
 
         zipcode = get_zipcode(neighbor.get_text())
 
-        # Use zipcode dictionary to find state and city
-        search = ZipCodeDatabase()
-        zip_obj = search[zipcode]
-        state = zip_obj.state
-        city = zip_obj.city
-        user.set_addr(None,city, state, "USA", zipcode)
+        if zipcode != None:
+            # Use zipcode dictionary to find state and city
+            search = ZipCodeDatabase()
+            zip_obj = search[zipcode]
+            state = zip_obj.state
+            city = zip_obj.city
+            user.set_addr(None,city, state, "USA", zipcode)
+        else:
+            user.set_addr(None, None, None, None, None)
 
     if not link_flag and not neighbor == None:
         user.set_link(get_links(neighbor.get_text()))
@@ -876,25 +925,38 @@ def create_segments():
     load_project_segment()
     load_other_segment()
 
-    print "***************************************************************************************************"
-    print "User segment: ", show(user_segment)
-    print "***************************************************************************************************"
-    print "Work segment: ", show(work_segment)
-    print "***************************************************************************************************"
-    print "Education segment: ",show(education_segment)
-    print "***************************************************************************************************"
-    print "Skill segment: ", show(skill_segment)
-    print "***************************************************************************************************"
-    print "Project segment: ", show(project_segment)
-    print "***************************************************************************************************"
-    print "Other segment: ", show(other_segment)
-    print "***************************************************************************************************"
-    print "\n\n"
+    # print "***************************************************************************************************"
+    # print "User segment: ", show(user_segment)
+    # print "***************************************************************************************************"
+    # print "Work segment: ", show(work_segment)
+    # print "***************************************************************************************************"
+    # print "Education segment: ",show(education_segment)
+    # print "***************************************************************************************************"
+    # print "Skill segment: ", show(skill_segment)
+    # print "***************************************************************************************************"
+    # print "Project segment: ", show(project_segment)
+    # print "***************************************************************************************************"
+    # print "Other segment: ", show(other_segment)
+    # print "***************************************************************************************************"
+    # print "Complete Strings: ", show(pdf_to_text_list)
+    # print "\n\n"
+    # print "SKILLS---", skill_segment
 
 
     user = parse_user_segment()
     parse_education_segment(user)
     user.education.display()
+
+    # Checking Skills in different sections. 
+    # Prepare the related list. 
+    checking_sections(skill_segment, "SKILL")
+    checking_sections(education_segment, "EDUCATION")
+    checking_sections(project_segment, "PROJECT")
+    checking_sections(user_segment, "USER")
+
+    print "PART1", output_list_p1
+    print "PART2", output_list_p2
+    print "PART3", output_list_p3
 
     # work_dict = parse_work_segment()
     # for k,v in work_dict.items():
@@ -1259,6 +1321,18 @@ def show_object(lt_obj):
 
 
 def parse_resume(key):
+    global output_list_p1, output_list_p2, output_list_p3
+    pdf_to_text_list = []
+    text_list_p1 = []
+    string_p1 = ""
+    text_list_p2 = []
+    string_p2 = ""
+    text_list_p3 = []
+    string_p3 = ""
+    output_list_p1 = []
+    output_list_p2 = []
+    output_list_p3 = []
+
     con = connect_db()
     db = con.meteor
     fs = gridfs.GridFS(db)
