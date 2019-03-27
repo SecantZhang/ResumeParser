@@ -1,5 +1,6 @@
 import csv
 import re
+import json
 
 from datetime import datetime
 import pdfminer
@@ -46,23 +47,61 @@ string_p3 = ""
 output_list_p1 = []
 output_list_p2 = []
 output_list_p3 = []
+output_json = ""
 dir_path = "wordList/"
+
+# def convert_output_list_to_json(list1, list2, list3):
+#     output_json = '{ "part1": { "skills": { '
+#     for i in range(0,len(list1[1])-1):
+#         if i != len(list1[1]):
+#             output_json += ('"' + str(list1[1][i]) + '" : 1,' + )
+#         else:
+#             output_json += ('"' + str(list1[1][i]) + '"')
+
+
+
 
 def checking_sections(list_segment, identi_str):
     global output_list_p1, output_list_p2, output_list_p3
     global string_p1, string_p2, string_p3
+    outlist = []
     sum_list = []
     sum_list += [re.split(', |                       |: |\xe2\x80\xa2', i) for i in list_segment]
     merged = filter(None, list(itertools.chain.from_iterable(sum_list)))
     result_list = filter(None, [x.strip(' ') for x in merged])
     # print identi_str, result_list
     # Re-initialize the section list. 
-    if any(item in string_p1 for item in list_segment):
+    if any(item in string_p1 for item in result_list):
+        temp_list = []
         output_list_p1.append(identi_str)
-    if any(item in string_p2 for item in list_segment):
+        bool_list_p1 = [item in string_p1 for item in result_list]
+        for i,j in zip(bool_list_p1, result_list):
+            if i:
+                temp_list.append(j)
+        output_list_p1.append(temp_list)
+
+    if any(item in string_p2 for item in result_list):
+        temp_list = []
         output_list_p2.append(identi_str)
-    if any(item in string_p3 for item in list_segment):
+        bool_list_p2 = [item in string_p2 for item in result_list]
+        for i,j in zip(bool_list_p2, result_list):
+            if i:
+                temp_list.append(j)
+        output_list_p2.append(temp_list)
+
+    if any(item in string_p3 for item in result_list):
+        temp_list = []
         output_list_p3.append(identi_str)
+        bool_list_p3 = [item in string_p3 for item in result_list]
+        for i,j in zip(bool_list_p3, result_list):
+            if i:
+                temp_list.append(j)
+        output_list_p3.append(temp_list)
+    
+
+    # if identi_str == "SKILL":
+    #     print identi_str, result_list
+    #     print string_p1
     
 
 
@@ -950,14 +989,16 @@ def create_segments():
     # Checking Skills in different sections. 
     # Prepare the related list. 
     checking_sections(skill_segment, "SKILL")
-    checking_sections(education_segment, "EDUCATION")
-    checking_sections(project_segment, "PROJECT")
-    checking_sections(user_segment, "USER")
+    # checking_sections(education_segment, "EDUCATION")
+    # checking_sections(project_segment, "PROJECT")
+    # checking_sections(user_segment, "USER")
 
-    print "PART1", output_list_p1
-    print "PART2", output_list_p2
-    print "PART3", output_list_p3
-
+    print "PART1", output_list_p1, "\n------------------------------------------------\n"
+    print "PART2", output_list_p2, "\n------------------------------------------------\n"
+    print "PART3", output_list_p3, "\n------------------------------------------------\n"
+    # print string_p1, "\n------------------------------------------------\n"
+    # print string_p2, "\n------------------------------------------------\n"
+    # print string_p3, "\n------------------------------------------------\n"
     # work_dict = parse_work_segment()
     # for k,v in work_dict.items():
     #     print k.strip()
